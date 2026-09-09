@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CellStore - Venta de Celulares</title>
+    <link rel="stylesheet" href="css/stylos.css">
+</head>
+ 
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+
+        <div class="logo">
+            📱 CellStore
+        </div>
+
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button class="btn-carrito" onclick="mostrarCarrito()">
+            🛒 Carrito
+            <span id="contador-carrito">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-contenido">
+
+            <h1>Los mejores celulares en un solo lugar</h1>
+
+            <p>
+                Encuentra smartphones modernos al mejor precio.
+            </p>
+
+            <a href="#productos" class="btn-principal">
+                Ver productos
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="seccion">
+
+        <h2>📱 Nuestros celulares</h2>
+
+        <!-- BUSCADOR -->
+        <div class="buscador">
+
+            <input
+                type="text"
+                id="buscar"
+                placeholder="Buscar celular..."
+                onkeyup="buscarProducto()"
+            >
+
+        </div>
+
+
+        <!-- CATÁLOGO -->
+        <div id="lista-productos" class="productos">
+
+            <!-- Los productos serán generados con JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="nosotros">
+
+        <h2>Sobre nosotros</h2>
+
+        <p>
+            Somos una tienda dedicada a la venta de celulares y accesorios
+            tecnológicos. Nuestro objetivo es ofrecer productos de calidad
+            a precios accesibles.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion">
+
+        <h2>📩 Contáctanos</h2>
+
+        <form id="form-contacto">
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Nombre"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Correo electrónico"
+                required
+            >
+
+            <textarea
+                id="mensaje"
+                placeholder="Escribe tu mensaje"
+                required
+            ></textarea>
+
+            <button type="submit" class="btn-principal">
+                Enviar mensaje
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- CARRITO -->
+    <div id="modal-carrito" class="modal">
+
+        <div class="carrito">
+
+            <button class="cerrar" onclick="cerrarCarrito()">
+                ✕
+            </button>
+
+            <h2>🛒 Mi carrito</h2>
+
+            <div id="productos-carrito">
+                <!-- Productos del carrito -->
+            </div>
+
+            <div class="total">
+
+                <strong>Total:</strong>
+
+                <span id="total">
+                    S/ 0.00
+                </span>
+
+            </div>
+
+            <button
+                class="btn-comprar"
+                onclick="realizarCompra()"
+            >
+                Comprar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 CellStore - Todos los derechos reservados
+        </p>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
